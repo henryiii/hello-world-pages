@@ -32,16 +32,16 @@ jobs:
         uses: actions/checkout@v3
       - name: Setup Pages
         uses: actions/configure-pages@v1
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          # Upload entire repository
-          path: '.'
       - name: Simulate some other artifact
         uses: actions/upload-artifact@v3
         with:
           path: '.'
           name: random
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          # Upload entire repository
+          path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@main
