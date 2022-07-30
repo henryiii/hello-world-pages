@@ -36,7 +36,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           path: '.'
-          name: random
+          name: awful
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
