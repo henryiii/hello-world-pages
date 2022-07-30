@@ -37,6 +37,11 @@ jobs:
         with:
           # Upload entire repository
           path: '.'
+      - name: Simulate some other artifact
+        uses: actions/upload-artifact@v3
+        with:
+          path: '.'
+          name: random
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@main
